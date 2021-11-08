@@ -90,13 +90,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_rsp
@@ -125,13 +126,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_rdp
@@ -160,13 +162,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_rqp
@@ -195,13 +198,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_csp
@@ -230,13 +234,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_cdp
@@ -265,13 +270,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_cqp
@@ -300,13 +306,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_iint8
@@ -335,13 +342,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_iint16
@@ -370,13 +378,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_iint32
@@ -405,13 +414,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_iint64
@@ -440,13 +450,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_llk
@@ -475,13 +486,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str)
-        x_str = string_type(to_string(x, format_))
-        write(unit_, "(*(A,/))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
+            allocate(x_str)
+            x_str = string_type(to_string(x, format_))
+            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+            
         
         
     end subroutine disp_0_lc_bool
@@ -510,12 +522,12 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
-        write(unit_, "(*(A,/))") format_output_string([x], width_, brief_, sep_, len(x))
-        
+            write(unit_, *) format_output_string([x], width_, brief_, sep_, len(x))
+            
         
         
     end subroutine disp_0_tstring_type
@@ -544,15 +556,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_rsp
@@ -581,15 +594,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_rdp
@@ -618,15 +632,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_rqp
@@ -655,15 +670,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_csp
@@ -692,15 +708,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_cdp
@@ -729,15 +746,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_cqp
@@ -766,15 +784,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_iint8
@@ -803,15 +822,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_iint16
@@ -840,15 +860,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_iint32
@@ -877,15 +898,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_iint64
@@ -914,15 +936,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_llk
@@ -951,15 +974,16 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1)))
-        do i = 1, size(x, 1)
-            x_str(i) = string_type(to_string(x(i), format_))
-        end do
-        write(unit_, "(*(A,/))") format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
+            allocate(x_str(size(x, 1)))
+            do i = 1, size(x, 1)
+                x_str(i) = string_type(to_string(x(i), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+            
         
         
     end subroutine disp_1_lc_bool
@@ -988,12 +1012,12 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
-        write(unit_, "(*(A,/))") format_output_string(x, width_, brief_, sep_, maxval(len(x)))
-        
+            write(unit_, *) format_output_string(x, width_, brief_, sep_, maxval(len(x)))
+            
         
         
     end subroutine disp_1_tstring_type
@@ -1022,19 +1046,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_rsp
@@ -1063,19 +1088,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_rdp
@@ -1104,19 +1130,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_rqp
@@ -1145,19 +1172,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_csp
@@ -1186,19 +1214,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_cdp
@@ -1227,19 +1256,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_cqp
@@ -1268,19 +1298,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_iint8
@@ -1309,19 +1340,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_iint16
@@ -1350,19 +1382,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_iint32
@@ -1391,19 +1424,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_iint64
@@ -1432,19 +1466,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_llk
@@ -1473,19 +1508,20 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 1), size(x, 2)))
-        do i = 1, size(x, 1)
-            do j = 1, size(x, 2)
-                x_str(i, j) = string_type(to_string(x(i, j), format_))
+        
+            allocate(x_str(size(x, 1), size(x, 2)))
+            do i = 1, size(x, 1)
+                do j = 1, size(x, 2)
+                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                end do
             end do
-        end do
-        max_elem_len = maxval(len(x_str))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x_str))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_lc_bool
@@ -1514,14 +1550,14 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, "(*(A,/))") format_output_string([string_type(header)], width_, brief_, sep_, len(header))
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
-        max_elem_len = maxval(len(x))
-        do i = 1, size(x, 1)
-            write(unit_, "(*(A,/))") format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
-        end do
+            max_elem_len = maxval(len(x))
+            do i = 1, size(x, 1)
+                write(unit_, *) format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
+            end do
         
         
     end subroutine disp_2_tstring_type
@@ -1554,6 +1590,7 @@ contains
                         buffer = buffer//char(x((i-1)*num1+j))//sep
                     end do
                     str(i) = buffer
+                    str(i)(width-1:width) = new_line("")//" "
                     
                 end do
                 

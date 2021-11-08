@@ -23,8 +23,8 @@ program test
         call disp(c, header='disp(c):')
         call disp(i, header='disp(i):')
         call disp(l, header='disp(l):', brief=.true.)
-        ! call disp(c_3d(:, :, 3), header='disp(c_3d(:,:,3)):', brief=.true.)
-        call disp(c_3d(2, :, :), header='disp(c_3d(2,:,:)):', brief=.true.)
+        call disp(c_3d(:, 3, :), header='disp(c_3d(:,:,3)):', brief=.true.)
+        ! call disp(c_3d(2, :, :), header='disp(c_3d(2,:,:)):', brief=.true.)
     end block
 
 end program test
