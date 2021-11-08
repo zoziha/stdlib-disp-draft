@@ -21,6 +21,7 @@ module stdlib_io_disp
     public :: disp
 
     interface disp
+        module procedure disp_0
         module procedure disp_0_rsp
         module procedure disp_0_rdp
         module procedure disp_0_rqp
@@ -79,7 +80,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -116,7 +117,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -153,7 +154,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -190,7 +191,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -227,7 +228,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -264,7 +265,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -301,7 +302,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -338,7 +339,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -375,7 +376,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -412,7 +413,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -449,7 +450,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -486,7 +487,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        type(string_type), allocatable :: x_str
         type(string_type) :: array_info
         
         !> State default values
@@ -523,7 +524,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str !! Docker
+        
         type(string_type) :: array_info
         
         !> State default values
@@ -558,7 +559,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -574,7 +575,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -600,7 +601,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -616,7 +617,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -642,7 +643,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -658,7 +659,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -684,7 +685,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -700,7 +701,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -726,7 +727,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -742,7 +743,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -768,7 +769,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -784,7 +785,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -810,7 +811,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -826,7 +827,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -852,7 +853,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -868,7 +869,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -894,7 +895,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -910,7 +911,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -936,7 +937,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -952,7 +953,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -978,7 +979,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -994,7 +995,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -1020,7 +1021,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type), allocatable :: x_str(:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1036,7 +1037,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
             
                 allocate(x_str(size(x, 1)))
@@ -1062,7 +1063,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:) !! Docker
+        
         type(string_type) :: array_info
         
         !> State default values
@@ -1078,7 +1079,7 @@ contains
         end if
         
         
-                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                array_info = array_info_maker(size(x, 1))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 write(unit_, *) format_output_string(x, width_, brief_, sep_, maxval(len(x)))
@@ -1100,7 +1101,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1116,7 +1117,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1146,7 +1147,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1162,7 +1163,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1192,7 +1193,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1208,7 +1209,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1238,7 +1239,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1254,7 +1255,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1284,7 +1285,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1300,7 +1301,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1330,7 +1331,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1346,7 +1347,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1376,7 +1377,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1392,7 +1393,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1422,7 +1423,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1438,7 +1439,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1468,7 +1469,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1484,7 +1485,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1514,7 +1515,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1530,7 +1531,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1560,7 +1561,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1576,7 +1577,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1606,7 +1607,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type), allocatable :: x_str(:,:)
         type(string_type) :: array_info
         
         !> State default values
@@ -1622,7 +1623,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
@@ -1652,7 +1653,7 @@ contains
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:,:) !! Docker
+        
         type(string_type) :: array_info
         
         !> State default values
@@ -1668,7 +1669,7 @@ contains
         end if
         
         
-                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                array_info = array_info_maker(size(x, 1), size(x, 2))
                 write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
                 
                 max_elem_len = maxval(len(x))
@@ -1679,7 +1680,7 @@ contains
         
     end subroutine disp_2_tstring_type
     
-    function format_output_string(x, width, brief, sep, max_elem_len) result(str)
+    pure function format_output_string(x, width, brief, sep, max_elem_len) result(str)
         type(string_type), intent(in) :: x(:)
         integer, intent(in) :: width, max_elem_len
         logical, intent(in) :: brief 
@@ -1687,7 +1688,6 @@ contains
         character(width), allocatable :: str(:)
         character(:), allocatable :: buffer
         character(max_elem_len+len(sep)) :: elem_buffer
-        character(len=:), allocatable :: tmp(:)
         
         integer :: elem_len, num1, num2, i, j
         
@@ -1713,12 +1713,12 @@ contains
                     
                 end do
                 
-                    buffer = ""
-                    do j = 1, mod(size(x, 1), num1)
-                        elem_buffer = char(x((i-1)*num1+j))//sep
-                        buffer = buffer//elem_buffer
-                    end do
-                    str(i) = buffer
+                buffer = ""
+                do j = 1, mod(size(x, 1), num1)
+                    elem_buffer = char(x((i-1)*num1+j))//sep
+                    buffer = buffer//elem_buffer
+                end do
+                str(i) = buffer
                 
             else
                 allocate(str(1))
@@ -1734,5 +1734,19 @@ contains
         end if
         
     end function format_output_string
+    
+    pure type(string_type) function array_info_maker(m, n) result(info)
+        integer, intent(in) :: m
+        integer, intent(in), optional :: n
+        if (present(n)) then
+            info = string_type('[matrix size: ' // to_string(m) // '×' // to_string(n) // ']')
+        else
+            info = string_type('[vector size: ' // to_string(m) // ']')
+        end if
+    end function array_info_maker
+    
+    subroutine disp_0()
+        print *, ""
+    end subroutine disp_0
 
 end module stdlib_io_disp

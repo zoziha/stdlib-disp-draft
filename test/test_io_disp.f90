@@ -17,7 +17,7 @@ program test
         c_3d(1, 3, 2) = (1.e4, 100.)
         call disp(string_type('string'), header='disp(string):')
         call disp(string_type('It is a note.'))
-        ! call disp()
+        call disp()
         call disp(r, header='disp(r):')
         call disp(r(1, :), header='disp(r(1,:))')
         call disp(c, header='disp(c):')
