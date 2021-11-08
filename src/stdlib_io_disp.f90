@@ -80,6 +80,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -94,9 +95,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -116,6 +117,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -130,9 +132,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -152,6 +154,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -166,9 +169,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -188,6 +191,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -202,9 +206,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -224,6 +228,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -238,9 +243,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -260,6 +265,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -274,9 +280,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -296,6 +302,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -310,9 +317,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -332,6 +339,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -346,9 +354,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -368,6 +376,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -382,9 +391,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -404,6 +413,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -418,9 +428,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -440,6 +450,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -454,9 +465,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -476,6 +487,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -490,9 +502,9 @@ contains
         end if
         
         
-            allocate(x_str)
-            x_str = string_type(to_string(x, format_))
-            write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                allocate(x_str)
+                x_str = string_type(to_string(x, format_))
+                write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -512,6 +524,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -526,7 +539,7 @@ contains
         end if
         
         
-            write(unit_, *) format_output_string([x], width_, brief_, sep_, len(x))
+                write(unit_, *) format_output_string([x], width_, brief_, sep_, len(x))
             
         
         
@@ -546,6 +559,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -560,11 +574,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -584,6 +601,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -598,11 +616,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -622,6 +643,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -636,11 +658,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -660,6 +685,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -674,11 +700,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -698,6 +727,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -712,11 +742,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -736,6 +769,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -750,11 +784,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -774,6 +811,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -788,11 +826,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -812,6 +853,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -826,11 +868,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -850,6 +895,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -864,11 +910,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -888,6 +937,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -902,11 +952,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -926,6 +979,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -940,11 +994,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -964,6 +1021,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -978,11 +1036,14 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1)))
-            do i = 1, size(x, 1)
-                x_str(i) = string_type(to_string(x(i), format_))
-            end do
-            write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+            
+                allocate(x_str(size(x, 1)))
+                do i = 1, size(x, 1)
+                    x_str(i) = string_type(to_string(x(i), format_))
+                end do
+                write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
             
         
         
@@ -1002,6 +1063,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1016,8 +1078,11 @@ contains
         end if
         
         
-            write(unit_, *) format_output_string(x, width_, brief_, sep_, maxval(len(x)))
-            
+                array_info = string_type('[vector size: ' // to_string(size(x, 1)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                write(unit_, *) format_output_string(x, width_, brief_, sep_, maxval(len(x)))
+                
         
         
     end subroutine disp_1_tstring_type
@@ -1036,6 +1101,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1050,16 +1116,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_rsp
@@ -1078,6 +1147,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1092,16 +1162,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_rdp
@@ -1120,6 +1193,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1134,16 +1208,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_rqp
@@ -1162,6 +1239,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1176,16 +1254,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_csp
@@ -1204,6 +1285,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1218,16 +1300,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_cdp
@@ -1246,6 +1331,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1260,16 +1346,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_cqp
@@ -1288,6 +1377,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1302,16 +1392,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_iint8
@@ -1330,6 +1423,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1344,16 +1438,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_iint16
@@ -1372,6 +1469,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1386,16 +1484,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_iint32
@@ -1414,6 +1515,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1428,16 +1530,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_iint64
@@ -1456,6 +1561,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1470,16 +1576,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_llk
@@ -1498,6 +1607,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1512,16 +1622,19 @@ contains
         end if
         
         
-            allocate(x_str(size(x, 1), size(x, 2)))
-            do i = 1, size(x, 1)
-                do j = 1, size(x, 2)
-                    x_str(i, j) = string_type(to_string(x(i, j), format_))
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                allocate(x_str(size(x, 1), size(x, 2)))
+                do i = 1, size(x, 1)
+                    do j = 1, size(x, 2)
+                        x_str(i, j) = string_type(to_string(x(i, j), format_))
+                    end do
                 end do
-            end do
-            max_elem_len = maxval(len(x_str))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                max_elem_len = maxval(len(x_str))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_lc_bool
@@ -1540,6 +1653,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:) !! Docker
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1554,10 +1668,13 @@ contains
         end if
         
         
-            max_elem_len = maxval(len(x))
-            do i = 1, size(x, 1)
-                write(unit_, *) format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
-            end do
+                array_info = string_type('[matrix size: ' // to_string(size(x, 1)) // '×' // to_string(size(x, 2)) // ']')
+                write(unit_, *) format_output_string([array_info], width_, brief_, sep_, len(array_info))
+                
+                max_elem_len = maxval(len(x))
+                do i = 1, size(x, 1)
+                    write(unit_, *) format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
+                end do
         
         
     end subroutine disp_2_tstring_type
