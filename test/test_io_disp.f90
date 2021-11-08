@@ -21,11 +21,11 @@ program test
         call disp()
         call disp(r, header='disp(r):')
         call disp(r(1, :), header='disp(r(1,:))')
-        call disp(c, header='disp(c):')
+        call disp(c, header='disp(c):', width=90)
         call disp(i, header='disp(i):')
         call disp(l, header='disp(l):', brief=.true., sep=", ")
-        call disp(c_3d(:, 3, :), header='disp(c_3d(:,:,3)):', brief=.true.)
-        call disp(r_2d, header='disp(c_3d(2,:,:)):', brief=.true., width=132)
+        call disp(c_3d(:, 3, :), header='disp(c_3d(:,:,3)):', brief=.true., width=90)
+        call disp(100*r_2d, header='disp(r_2d):', brief=.true., width=132, sep=", ")
     end block
 
 end program test

@@ -76,12 +76,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -90,6 +90,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -113,12 +114,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -127,6 +128,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -150,12 +152,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -164,6 +166,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -187,12 +190,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -201,6 +204,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -224,12 +228,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -238,6 +242,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -261,12 +266,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -275,6 +280,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -298,12 +304,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -312,6 +318,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -335,12 +342,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -349,6 +356,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -372,12 +380,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -386,6 +394,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -409,12 +418,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -423,6 +432,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -446,12 +456,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -460,6 +470,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -483,12 +494,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -497,6 +508,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -520,12 +532,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -534,6 +546,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -555,12 +568,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -569,6 +582,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -597,12 +611,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -611,6 +625,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -639,12 +654,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -653,6 +668,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -681,12 +697,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -695,6 +711,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -723,12 +740,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -737,6 +754,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -765,12 +783,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -779,6 +797,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -807,12 +826,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -821,6 +840,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -849,12 +869,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -863,6 +883,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -891,12 +912,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -905,6 +926,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -933,12 +955,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -947,6 +969,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -975,12 +998,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -989,6 +1012,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1017,12 +1041,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1031,6 +1055,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1059,12 +1084,12 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_, max_elem_len
+        integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1073,6 +1098,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1102,7 +1128,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1111,6 +1137,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1127,9 +1154,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_rsp
@@ -1148,7 +1187,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1157,6 +1196,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1173,9 +1213,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_rdp
@@ -1194,7 +1246,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1203,6 +1255,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1219,9 +1272,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_rqp
@@ -1240,7 +1305,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1249,6 +1314,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1265,9 +1331,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_csp
@@ -1286,7 +1364,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1295,6 +1373,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1311,9 +1390,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_cdp
@@ -1332,7 +1423,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1341,6 +1432,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1357,9 +1449,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_cqp
@@ -1378,7 +1482,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1387,6 +1491,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1403,9 +1508,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_iint8
@@ -1424,7 +1541,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1433,6 +1550,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1449,9 +1567,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_iint16
@@ -1470,7 +1600,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1479,6 +1609,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1495,9 +1626,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_iint32
@@ -1516,7 +1659,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1525,6 +1668,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1541,9 +1685,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_iint64
@@ -1562,7 +1718,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1571,6 +1727,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1587,9 +1744,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_llk
@@ -1608,7 +1777,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1617,6 +1786,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1633,9 +1803,21 @@ contains
                     end do
                 end do
                 max_elem_len = maxval(len(x_str))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x_str(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
+                
         
         
     end subroutine disp_2_lc_bool
@@ -1654,7 +1836,7 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info
+        type(string_type) :: array_info, coloum(5)
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1663,6 +1845,7 @@ contains
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
         sep_    = optval(sep, "  ")
+        coloum  = string_type(":")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
@@ -1673,9 +1856,20 @@ contains
                 write(unit_, *) format_output_string([array_info], width_, brief_, "", len(array_info))
                 
                 max_elem_len = maxval(len(x))
-                do i = 1, size(x, 1)
-                    write(unit_, "(*(A))") format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
-                end do
+                if (brief_.and.size(x, 1)>5) then
+                    do i = 1, 3
+                        write(unit_, "(*(A))") format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                    
+                    write(unit_, "(*(A))") format_output_string(coloum(1:merge(size(x, 2), 5, size(x, 2)<=5)), &
+                        width_, brief_, repeat(" ", len(sep_)), max_elem_len)
+                    write(unit_, "(*(A))") format_output_string(x(size(x, 1), :), width_, brief_, sep_, max_elem_len)
+                    
+                else
+                    do i = 1, size(x, 1)
+                        write(unit_, "(*(A))") format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
+                    end do
+                end if
                 
         
         
@@ -1683,21 +1877,20 @@ contains
     
     pure function format_output_string(x, width, brief, sep, max_elem_len) result(str)
         type(string_type), intent(in) :: x(:)
-        integer, intent(in) :: width, max_elem_len
-        logical, intent(in) :: brief 
+        integer, intent(in) :: width
+        logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
+        integer, intent(in) :: max_elem_len
         character(width+2), allocatable :: str(:)
         character(:), allocatable :: buffer
         character(max_elem_len+len(sep)) :: elem_buffer
         
         integer :: elem_len, num1, num2, i, j
         
-        !> 获取最长的字符串长度
-        
         elem_len = max_elem_len + len(sep)
         num1 = elem_len/width
         if (num1 == 0) then
-            num1 = width/elem_len  !! 一行有几个数
+            num1 = width/elem_len
             num2 = size(x, 1)/num1
             
             if (num2 /= 0) then
@@ -1722,6 +1915,7 @@ contains
                 str(i) = buffer
                 
             else
+            
                 allocate(str(1))
                 buffer = ""
                 do j = 1, size(x, 1)
