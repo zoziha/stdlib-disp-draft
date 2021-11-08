@@ -11,7 +11,7 @@ module stdlib_io_disp
                             int8, int16, int32, int64, &
                             lk, c_bool
 
-    use stdlib_string_type, only: string_type, char
+    use stdlib_string_type, only: string_type, char, len
     use stdlib_optval, only: optval
     use stdlib_strings, only: to_string
     use, intrinsic :: iso_fortran_env, only: output_unit
@@ -1495,24 +1495,48 @@ contains
         logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
         character(width), allocatable :: str(:)
+        character(:), allocatable :: buffer
         character(len=:), allocatable :: tmp(:)
         
-        integer :: max_len, elem_len, num1, num2, i
+        integer :: max_len, elem_len, num1, num2, i, j
         
         !> 获取最长的字符串长度
+        max_len = maxval(len(x))
         elem_len = max_len + len(sep)
-        num1 = (width-1)/elem_len
-        if (num1 /= 0) then
+        num1 = elem_len/(width-1)
+        if (num1 == 0) then
+            num1 = (width-1)/elem_len  !! 一行有几个数
             num2 = size(x, 1)/num1
-            allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
             
-            do i = 1, size(str) - 1
-                str(i) = char(x(num1*i))//sep//char(x(num1*i+1))//sep//char(x(num1*i+2))//sep
-            end do
-        else
-            allocate(str(1))
+            if (num2 /= 0) then
+                allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
+                do i = 1, size(str) - 1
+                    
+                    buffer = ""
+                    do j = 1, num1
+                        buffer = buffer//char(x(i*num1+j))//sep
+                    end do
+                    str(i) = buffer
+                    
+                end do
+                
+                    buffer = ""
+                    do j = 1, mod(size(x, 1), num1)
+                        buffer = buffer//char(x(i*num1+j))//sep
+                    end do
+                    str(i) = buffer
+                
+            else
+                allocate(str(1))
+                buffer = ""
+                do j = 1, mod(size(x, 1), num1)
+                    buffer = buffer//char(x(j))//sep
+                end do
+                str(1) = buffer
+                
+            end if
+            
         end if
-        str(size(str)) = char(x(num1*size(str)))//sep
         
     end function format_output_string
 
