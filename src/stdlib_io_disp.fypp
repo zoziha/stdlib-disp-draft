@@ -1,0 +1,158 @@
+#:set REAL_KINDS = ["sp", "dp", "qp"]
+#:set REAL_TYPES = ["real({})".format(k) for k in REAL_KINDS]
+#:set REAL_KINDS_TYPES = list(zip(REAL_KINDS, REAL_TYPES))
+
+#:set CMPLX_KINDS = ["sp", "dp", "qp"]
+#:set CMPLX_TYPES = ["complex({})".format(k) for k in CMPLX_KINDS]
+#:set CMPLX_KINDS_TYPES = list(zip(CMPLX_KINDS, CMPLX_TYPES))
+
+#:set INT_KINDS = ["int8", "int16", "int32", "int64"]
+#:set INT_TYPES = ["integer({})".format(k) for k in INT_KINDS]
+#:set INT_KINDS_TYPES = list(zip(INT_KINDS, INT_TYPES))
+
+#:set LOG_KINDS = ["lk", "c_bool"]
+#:set LOG_TYPES = ["logical({})".format(k) for k in LOG_KINDS]
+#:set LOG_KINDS_TYPES = list(zip(LOG_KINDS, LOG_TYPES))
+
+#:set STRING_KINDS = ["string_type"]
+#:set STRING_TYPES = ["type({})".format(k) for k in STRING_KINDS]
+#:set STRING_KINDS_TYPES = list(zip(STRING_KINDS, STRING_TYPES))
+
+#:set ALL_KINDS_TYPES = REAL_KINDS_TYPES + CMPLX_KINDS_TYPES + INT_KINDS_TYPES + LOG_KINDS_TYPES + STRING_KINDS_TYPES
+
+#:def ranksuffix(RANK)
+$:'' if RANK == 0 else '(' + ':' + ',:' * (RANK - 1) + ')'
+#:enddef ranksuffix
+
+module stdlib_io_disp
+
+    use stdlib_kinds, only: sp, dp, qp, &
+                            int8, int16, int32, int64, &
+                            lk, c_bool
+
+    use stdlib_string_type, only: string_type, char
+    use stdlib_optval, only: optval
+    use stdlib_strings, only: to_string
+    use, intrinsic :: iso_fortran_env, only: output_unit
+    implicit none
+    private
+
+    public :: disp
+
+    interface disp
+        #:for r1 in range(0, 3)
+        #:for k1, t1 in ALL_KINDS_TYPES
+        module procedure disp_${r1}$_${t1[0]}$${k1}$
+        #:endfor
+        #:endfor
+    end interface disp
+
+contains
+
+    #!                  | string | data elem 1 | unknown width |  sep  | string | line 1 | defined width |
+    #! Any type data -> | string | data elem 2 | unknown width |  -->  | string | line 2 | defined width | -> sequncetial output
+    #!                  | ...    | ...         | ...           |  add  | ...    | ...    | ...           |
+
+    #! REAL, COMPLEX, INTEGER, LOGICAL, STRING_TYPE
+    #:for r1 in range(0, 3)
+    #:for k1, t1 in ALL_KINDS_TYPES
+    subroutine disp_${r1}$_${t1[0]}$${k1}$(x, header, unit, brief, format, width, sep)
+    
+        ${t1}$, intent(in) :: x${ranksuffix(r1)}$
+        character(len=*), intent(in), optional :: header
+        integer, intent(in), optional :: unit
+        logical, intent(in), optional :: brief
+        character(len=*), intent(in), optional :: format
+        integer, intent(in), optional :: width
+        character(len=*), intent(in), optional :: sep
+        
+        integer :: unit_, width_
+        logical :: brief_
+        character(len=:), allocatable :: format_, sep_
+        integer :: i, j
+        type(string_type), allocatable :: x_str(:)
+        
+        !> State default values
+        unit_   = optval(unit, output_unit)
+        brief_  = optval(brief, .false.)
+        format_ = optval(format, "g0.4")
+        width_  = optval(width, 80)
+        width_  = merge(width_, 4, width_ >= 4)
+        sep_    = optval(sep, "  ")
+            
+        if (present(header)) then
+            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+        end if
+        
+        #:if k1 != "string_type"
+        #:if r1 == 0
+        allocate(x_str(1))
+        x_str(1) = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        
+        #:elif r1 == 1
+        allocate(x_str(size(x, 1)))
+        do i = 1, size(x, 1)
+            x_str(i) = string_type(to_string(x(i), format_))
+        end do
+        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        
+        #:elif r1 == 2
+        allocate(x_str(size(x, 2)))
+        do i = 1, size(x, 1)
+            do j = 1, size(x, 2)
+                x_str(j) = string_type(to_string(x(i, j), format_))
+            end do
+            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        #:endif
+        
+        #:elif k1 == "string_type"
+        
+        #:if r1 == 0
+        write(unit_, *) format_output_string([x], width=width_, brief=brief_, sep=sep_)
+        
+        #:elif r1 == 1
+        write(unit_, *) format_output_string(x, width=width_, brief=brief_, sep=sep_)
+        
+        #:elif r1 == 2
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x(i, :), width=width_, brief=brief_, sep=sep_)
+        end do
+        #:endif
+        
+        #:endif
+        
+    end subroutine disp_${r1}$_${t1[0]}$${k1}$
+    #:endfor
+    #:endfor
+    
+    #! FORMAT OUTPUT STRING
+    function format_output_string(x, width, brief, sep) result(str)
+        type(string_type), intent(in) :: x(:)
+        integer, intent(in) :: width
+        logical, intent(in) :: brief
+        character(len=*), intent(in) :: sep
+        character(width), allocatable :: str(:)
+        character(len=:), allocatable :: tmp(:)
+        
+        integer :: max_len, elem_len, num1, num2, i
+        
+        !> 获取最长的字符串长度
+        elem_len = max_len + len(sep)
+        num1 = (width-1)/elem_len
+        if (num1 /= 0) then
+            num2 = size(x, 1)/num1
+            allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
+            
+            do i = 1, size(str) - 1
+                str(i) = char(x(num1*i))//sep//char(x(num1*i+1))//sep//char(x(num1*i+2))//sep
+            end do
+        else
+            allocate(str(1))
+        end if
+        str(size(str)) = char(x(num1*size(str)))//sep
+        
+    end function format_output_string
+
+end module stdlib_io_disp

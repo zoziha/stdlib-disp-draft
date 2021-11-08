@@ -1,0 +1,4 @@
+name = "stdlib-disp-draft"
+
+[dependencies]
+forlab = { git="https://github.com/fortran-fans/forlab", branch="forlab-fpm" }
