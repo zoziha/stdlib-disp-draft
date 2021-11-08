@@ -87,7 +87,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -122,7 +122,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -157,7 +157,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -192,7 +192,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -227,7 +227,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -262,7 +262,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -297,7 +297,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -332,7 +332,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -367,7 +367,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -402,7 +402,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -437,7 +437,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -472,7 +472,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -507,7 +507,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -541,7 +541,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -578,7 +578,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -615,7 +615,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -652,7 +652,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -689,7 +689,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -726,7 +726,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -763,7 +763,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -800,7 +800,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -837,7 +837,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -874,7 +874,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -911,7 +911,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -948,7 +948,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -985,7 +985,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1019,7 +1019,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1057,7 +1057,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1095,7 +1095,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1133,7 +1133,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1171,7 +1171,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1209,7 +1209,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1247,7 +1247,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1285,7 +1285,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1323,7 +1323,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1361,7 +1361,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1399,7 +1399,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1437,7 +1437,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1475,7 +1475,7 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, "  ")
+        sep_    = optval(sep, ", ")
             
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
@@ -1514,7 +1514,7 @@ contains
                     
                     buffer = ""
                     do j = 1, num1
-                        buffer = buffer//char(x(i*num1+j))//sep
+                        buffer = buffer//char(x((i-1)*num1+j))//sep
                     end do
                     str(i) = buffer
                     
@@ -1522,7 +1522,7 @@ contains
                 
                     buffer = ""
                     do j = 1, mod(size(x, 1), num1)
-                        buffer = buffer//char(x(i*num1+j))//sep
+                        buffer = buffer//char(x((i-1)*num1+j))//sep
                     end do
                     str(i) = buffer
                 
