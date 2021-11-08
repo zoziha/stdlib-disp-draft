@@ -75,11 +75,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -87,15 +87,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -110,11 +110,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -122,15 +122,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -145,11 +145,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -157,15 +157,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -180,11 +180,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -192,15 +192,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -215,11 +215,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -227,15 +227,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -250,11 +250,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -262,15 +262,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -285,11 +285,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -297,15 +297,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -320,11 +320,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -332,15 +332,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -355,11 +355,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -367,15 +367,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -390,11 +390,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -402,15 +402,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -425,11 +425,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -437,15 +437,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -460,11 +460,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -472,15 +472,15 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(1))
-        x_str(1) = string_type(to_string(x, format_))
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        allocate(x_str)
+        x_str = string_type(to_string(x, format_))
+        write(unit_, *) format_output_string([x_str], width_, brief_, sep_, len(x_str))
         
         
         
@@ -495,11 +495,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -507,14 +507,14 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
-        write(unit_, *) format_output_string([x], width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string([x], width_, brief_, sep_, len(x))
         
         
         
@@ -529,11 +529,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -541,17 +541,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -566,11 +566,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -578,17 +578,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -603,11 +603,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -615,17 +615,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -640,11 +640,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -652,17 +652,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -677,11 +677,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -689,17 +689,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -714,11 +714,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -726,17 +726,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -751,11 +751,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -763,17 +763,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -788,11 +788,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -800,17 +800,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -825,11 +825,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -837,17 +837,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -862,11 +862,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -874,17 +874,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -899,11 +899,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -911,17 +911,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -936,11 +936,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -948,17 +948,17 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         allocate(x_str(size(x, 1)))
         do i = 1, size(x, 1)
             x_str(i) = string_type(to_string(x(i), format_))
         end do
-        write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x_str, width_, brief_, sep_, maxval(len(x_str)))
         
         
         
@@ -973,11 +973,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -985,14 +985,14 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
-        write(unit_, *) format_output_string(x, width=width_, brief=brief_, sep=sep_)
+        write(unit_, *) format_output_string(x, width_, brief_, sep_, maxval(len(x)))
         
         
         
@@ -1007,11 +1007,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1019,18 +1019,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1045,11 +1048,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1057,18 +1060,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1083,11 +1089,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1095,18 +1101,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1121,11 +1130,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1133,18 +1142,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1159,11 +1171,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1171,18 +1183,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1197,11 +1212,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1209,18 +1224,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1235,11 +1253,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1247,18 +1265,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1273,11 +1294,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1285,18 +1306,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1311,11 +1335,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1323,18 +1347,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1349,11 +1376,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1361,18 +1388,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1387,11 +1417,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1399,18 +1429,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1425,11 +1458,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1437,18 +1470,21 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
-        allocate(x_str(size(x, 2)))
+        allocate(x_str(size(x, 1), size(x, 2)))
         do i = 1, size(x, 1)
             do j = 1, size(x, 2)
-                x_str(j) = string_type(to_string(x(i, j), format_))
+                x_str(i, j) = string_type(to_string(x(i, j), format_))
             end do
-            write(unit_, *) format_output_string(x_str, width=width_, brief=brief_, sep=sep_)
+        end do
+        max_elem_len = maxval(len(x_str))
+        do i = 1, size(x, 1)
+            write(unit_, *) format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
@@ -1463,11 +1499,11 @@ contains
         integer, intent(in), optional :: width
         character(len=*), intent(in), optional :: sep
         
-        integer :: unit_, width_
+        integer :: unit_, width_, max_elem_len
         logical :: brief_
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
-        type(string_type), allocatable :: x_str(:)
+        type(string_type), allocatable :: x_str(:,:) !! Docker
         
         !> State default values
         unit_   = optval(unit, output_unit)
@@ -1475,34 +1511,35 @@ contains
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
         width_  = merge(width_, 4, width_ >= 4)
-        sep_    = optval(sep, ", ")
+        sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, sep_, len(header))
         end if
         
         
+        max_elem_len = maxval(len(x))
         do i = 1, size(x, 1)
-            write(unit_, *) format_output_string(x(i, :), width=width_, brief=brief_, sep=sep_)
+            write(unit_, *) format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
         end do
         
         
     end subroutine disp_2_tstring_type
     
-    function format_output_string(x, width, brief, sep) result(str)
+    function format_output_string(x, width, brief, sep, max_elem_len) result(str)
         type(string_type), intent(in) :: x(:)
-        integer, intent(in) :: width
-        logical, intent(in) :: brief
+        integer, intent(in) :: width, max_elem_len
+        logical, intent(in) :: brief 
         character(len=*), intent(in) :: sep
         character(width), allocatable :: str(:)
         character(:), allocatable :: buffer
         character(len=:), allocatable :: tmp(:)
         
-        integer :: max_len, elem_len, num1, num2, i, j
+        integer :: elem_len, num1, num2, i, j
         
         !> 获取最长的字符串长度
-        max_len = maxval(len(x))
-        elem_len = max_len + len(sep)
+        
+        elem_len = max_elem_len + len(sep)
         num1 = elem_len/(width-1)
         if (num1 == 0) then
             num1 = (width-1)/elem_len  !! 一行有几个数
