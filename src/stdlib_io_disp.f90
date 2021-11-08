@@ -1569,6 +1569,7 @@ contains
         character(len=*), intent(in) :: sep
         character(width), allocatable :: str(:)
         character(:), allocatable :: buffer
+        character(max_elem_len+len(sep)) :: elem_buffer
         character(len=:), allocatable :: tmp(:)
         
         integer :: elem_len, num1, num2, i, j
@@ -1587,7 +1588,8 @@ contains
                     
                     buffer = ""
                     do j = 1, num1
-                        buffer = buffer//char(x((i-1)*num1+j))//sep
+                        elem_buffer = char(x((i-1)*num1+j))//sep
+                        buffer = buffer//elem_buffer
                     end do
                     str(i) = buffer
                     str(i)(width-1:width) = new_line("")//" "
@@ -1596,7 +1598,8 @@ contains
                 
                     buffer = ""
                     do j = 1, mod(size(x, 1), num1)
-                        buffer = buffer//char(x((i-1)*num1+j))//sep
+                        elem_buffer = char(x((i-1)*num1+j))//sep
+                        buffer = buffer//elem_buffer
                     end do
                     str(i) = buffer
                 
@@ -1604,7 +1607,8 @@ contains
                 allocate(str(1))
                 buffer = ""
                 do j = 1, mod(size(x, 1), num1)
-                    buffer = buffer//char(x(j))//sep
+                    elem_buffer = char(x(j))//sep
+                    buffer = buffer//elem_buffer
                 end do
                 str(1) = buffer
                 
