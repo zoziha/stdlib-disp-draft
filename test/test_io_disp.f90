@@ -5,7 +5,7 @@ program test
     call disp(string_type("x"))
     call disp([1, 2], "dada")
     block
-        real(8) :: r(2, 3)
+        real(8) :: r(2, 3), r_2d(50, 20)
         complex :: c(2, 3), c_3d(2, 100, 20)
         integer :: i(2, 3)
         logical :: l(10, 10)
@@ -15,6 +15,7 @@ program test
         c(2, 2) = (-1.e10, -1.e10)
         c_3d(1, 3, 1) = (1000, 0.001)
         c_3d(1, 3, 2) = (1.e4, 100.)
+        call random_number(r_2d)
         call disp(string_type('string'), header='disp(string):')
         call disp(string_type('It is a note.'))
         call disp()
@@ -24,7 +25,7 @@ program test
         call disp(i, header='disp(i):')
         call disp(l, header='disp(l):', brief=.true., sep=", ")
         call disp(c_3d(:, 3, :), header='disp(c_3d(:,:,3)):', brief=.true.)
-        ! call disp(c_3d(2, :, :), header='disp(c_3d(2,:,:)):', brief=.true.)
+        call disp(r_2d, header='disp(c_3d(2,:,:)):', brief=.true., width=132)
     end block
 
 end program test
