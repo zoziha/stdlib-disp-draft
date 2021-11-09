@@ -1878,15 +1878,16 @@ contains
     end subroutine disp_2_tstring_type
     
     pure function format_output_string(x, width, brief, sep, max_elem_len) result(str)
+    
         type(string_type), intent(in) :: x(:)
         integer, intent(in) :: width
         logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
         integer, intent(in) :: max_elem_len
         character(width+2), allocatable :: str(:)
-        character(:), allocatable :: buffer
-        character(max_elem_len+len(sep)) :: elem_buffer
         
+        character(:), allocatable :: buffer
+        character(max(max_elem_len, 2)+len(sep)) :: elem_buffer
         integer :: elem_len, num1, num2, i, j
         
         if (brief) then
