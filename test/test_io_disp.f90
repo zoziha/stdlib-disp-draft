@@ -27,5 +27,19 @@ program test
         call disp(c_3d(:, 3, :), header='disp(c_3d(:,:,3)):', brief=.true., width=90)
         call disp(100*r_2d, header='disp(r_2d):', brief=.true., width=132, sep=", ")
     end block
+    
+    block
+        type(string_type) :: s(2)
+        s = string_type("abcdefghijk")
+        call disp(s, header='disp(s):', width=6)
+        call disp(s(1), header='disp(s):', width=6)
+        
+        s = string_type(repeat("abcdefghijk", 10))
+        call disp(s, header='disp(s):', width=6)
+        call disp(s(1), header='disp(s):', width=6)
+        s(2) = string_type("abcdefghijk")
+        call disp(s, header='disp(s):', width=6)
+        
+    end block
 
 end program test

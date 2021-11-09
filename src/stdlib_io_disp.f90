@@ -63,6 +63,8 @@ module stdlib_io_disp
         module procedure disp_2_tstring_type
     end interface disp
 
+    type(string_type) :: coloum(5) !! 减轻编译体积
+
 contains
 
 
@@ -81,14 +83,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -119,14 +121,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -157,14 +159,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -195,14 +197,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -233,14 +235,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -271,14 +273,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -309,14 +311,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -347,14 +349,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -385,14 +387,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -423,14 +425,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -461,14 +463,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -499,14 +501,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -537,14 +539,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -573,14 +575,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -616,14 +618,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -659,14 +661,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -702,14 +704,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -745,14 +747,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -788,14 +790,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -831,14 +833,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -874,14 +876,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -917,14 +919,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -960,14 +962,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1003,14 +1005,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1046,14 +1048,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1089,14 +1091,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1128,14 +1130,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1187,14 +1189,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1246,14 +1248,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1305,14 +1307,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1364,14 +1366,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1423,14 +1425,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1482,14 +1484,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1541,14 +1543,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1600,14 +1602,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1659,14 +1661,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1718,14 +1720,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1777,14 +1779,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         type(string_type), allocatable :: x_str(:,:)
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1836,14 +1838,14 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         
-        type(string_type) :: array_info, coloum(5)
+        type(string_type) :: array_info
         
         !> State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
         width_  = optval(width, 80)
-        width_  = merge(width_, 4, width_ >= 4)
+        width_  = merge(width_, 80, width_ > 80)
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
@@ -1904,7 +1906,7 @@ contains
                     elem_buffer = char(x(i))//sep
                     buffer = buffer//elem_buffer
                 end do
-                elem_buffer = "..."//sep
+                elem_buffer = ".."//sep
                 buffer = buffer//elem_buffer
                 elem_buffer = char(x(size(x, 1)))//sep
                 buffer = buffer//elem_buffer
@@ -1915,43 +1917,56 @@ contains
         else
         
             elem_len = max_elem_len + len(sep)
-            num1 = elem_len/width
-            if (num1 == 0) then
-                num1 = width/elem_len
-                num2 = size(x, 1)/num1
+            !> width adjustment
+            num1 = merge(width/elem_len, 1, elem_len<width)
+            num2 = size(x, 1)/num1
+            
+            if (num2 > 1) then
+                allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
                 
-                if (num2 /= 0) then
-                    allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
-                    do i = 1, size(str) - 1
-                        
-                        buffer = ""
-                        do j = 1, num1
-                            elem_buffer = char(x((i-1)*num1+j))//sep
-                            buffer = buffer//elem_buffer
-                        end do
-                        str(i) = buffer
-                        str(i)(width+1:) = "&"//new_line("")
-                        
-                    end do
+                do i = 1, size(str) - 1
                     
                     buffer = ""
-                    do j = 1, merge(num1, mod(size(x, 1), num1), mod(size(x, 1), num1)==0)
+                    do j = 1, num1
                         elem_buffer = char(x((i-1)*num1+j))//sep
                         buffer = buffer//elem_buffer
                     end do
+                    
+                    if (len(x((i-1)*num1+j-1))>width-len(sep)-1) then
+                        buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
+                    end if
+                    
                     str(i) = buffer
+                    str(i)(width+1:) = "&"//new_line("")
                     
-                else
+                end do
                 
-                    allocate(str(1))
-                    buffer = ""
-                    do j = 1, size(x, 1)
-                        elem_buffer = char(x(j))//sep
-                        buffer = buffer//elem_buffer
-                    end do
-                    str(1) = buffer
-                    
+                buffer = ""
+                do j = 1, merge(num1, mod(size(x, 1), num1), mod(size(x, 1), num1)==0)
+                    elem_buffer = char(x((i-1)*num1+j))//sep
+                    buffer = buffer//elem_buffer
+                end do
+                
+                if (len(x((i-1)*num1+j-1))>width-len(sep)-1) then
+                    buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
                 end if
+                
+                str(i) = buffer
+            
+            else
+            
+                allocate(str(1))
+                buffer = ""
+                do j = 1, size(x, 1)
+                    elem_buffer = char(x(j))//sep
+                    buffer = buffer//elem_buffer
+                end do
+                
+                if (num2 == 1 .and. len(x(j-1))>width-len(sep)-1) then
+                    buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
+                end if
+                
+                str(1) = buffer
                 
             end if
             
