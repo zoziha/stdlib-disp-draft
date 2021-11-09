@@ -39,6 +39,7 @@ program test
         call disp(s(1), header='disp(s):', width=6)
         s(2) = string_type("abcdefghijk")
         call disp(s, header='disp(s):', width=6)
+        call disp("xyz")
         
     end block
 

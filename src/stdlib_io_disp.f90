@@ -21,7 +21,7 @@ module stdlib_io_disp
     public :: disp
 
     interface disp
-        module procedure disp_0
+        module procedure disp_char
         module procedure disp_0_rsp
         module procedure disp_0_rdp
         module procedure disp_0_rqp
@@ -101,7 +101,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -139,7 +139,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -177,7 +177,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -215,7 +215,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -253,7 +253,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -291,7 +291,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -329,7 +329,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -367,7 +367,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -405,7 +405,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -443,7 +443,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -481,7 +481,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -519,7 +519,7 @@ contains
         
                 allocate(x_str)
                 x_str = string_type(to_string(x, format_))
-                write(unit_, "(*(A))") format_output_string([x_str], width_, brief_, sep_, len(x_str))
+                write(unit_, "(A)") format_output_string([x_str], width_, brief_, sep_, len(x_str))
             
         
         
@@ -555,7 +555,7 @@ contains
         end if
         
         
-                write(unit_, "(*(A))") format_output_string([x], width_, brief_, sep_, len(x))
+                write(unit_, "(A)") format_output_string([x], width_, brief_, sep_, len(x))
             
         
         
@@ -1985,8 +1985,36 @@ contains
         end if
     end function array_info_maker
     
-    subroutine disp_0()
-        print *, ""
-    end subroutine disp_0
+    subroutine disp_char(x, header, unit, brief, format, width, sep)
+    
+        character(*), intent(in), optional :: x
+        character(len=*), intent(in), optional :: header
+        integer, intent(in), optional :: unit
+        logical, intent(in), optional :: brief
+        character(len=*), intent(in), optional :: format
+        integer, intent(in), optional :: width
+        character(len=*), intent(in), optional :: sep
+        
+        integer :: unit_, width_
+        logical :: brief_
+        character(len=:), allocatable :: x_, sep_
+        integer :: i, j
+        
+        !> State default values
+        x_      = optval(x, "")
+        unit_   = optval(unit, output_unit)
+        brief_  = optval(brief, .false.)
+        width_  = optval(width, 80)
+        width_  = merge(width_, 80, width_ > 80)
+        sep_    = optval(sep, "  ")
+            
+        if (present(header)) then
+            write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
+        end if
+        
+        coloum(1) = string_type(x_)
+        write(unit_, "(A)") format_output_string(coloum(1:1), width_, brief_, sep_, len(coloum(1)))
+        
+    end subroutine disp_char
 
 end module stdlib_io_disp
