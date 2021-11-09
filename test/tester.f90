@@ -380,12 +380,20 @@ contains
         close (unit)
 
     end subroutine test_io_disp_string_type
-
+    
+    subroutine larger_matrix
+        real(4) :: x(51,51)
+        call disp(x, header="Test_io_disp_real_matrix (51×51)(default) : [10×50]")
+        call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.true.) : [5×5]", brief=.true.)
+        call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.false.) : [all]", brief=.false.)
+    end subroutine larger_matrix
+    
 end module test_io_disp
 
 program tester
 
     use test_io_disp
+    logical :: test_larger = .false.
     
     call test_io_disp_complex
     call test_io_disp_real
@@ -397,11 +405,8 @@ program tester
     !> Content that is difficult to test: The length of the dimension is too large
     !>  to print and check by a test program.
     
-    ! block
-    !     real(4) :: x(51,51)
-    !     call disp(x, header="Test_io_disp_real_matrix (51×51)(default) : [10×50]")
-    !     call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.true.) : [5×5]", brief=.true.)
-    !     call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.false.) : [all]", brief=.false.)
-    ! end block
+    if (test_larger) then
+        call larger_matrix
+    end if
 
 end program tester
