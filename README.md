@@ -2,6 +2,13 @@
 
 `disp` subroutine is for displaying header and array nicely.
 
+## Run code
+
+```sh
+# Fypp && Format && fpm run
+fypp stdlib_io_disp.fypp stdlib_io_disp.f90 && fprettify -i 4 stdlib_io_disp.f90 && fpm test
+```
+
 ## API
 
 ```fortran
