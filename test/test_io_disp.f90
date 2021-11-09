@@ -42,5 +42,28 @@ program test
         call disp("xyz")
         
     end block
+    
+    block
+    
+    real    :: r(2, 3)
+    complex :: c(2, 3), c_3d(2, 100, 20)
+    integer :: i(2, 3)
+    logical :: l(10, 10)
+    
+    r = 1.; c = 1.; c_3d = 2.; i = 1; l = .true.
+    c_3d(1,3,1) = (1000, 0.001)
+    
+    call disp('string', header='disp(string):')
+    call disp('It is a note.')
+    call disp()
+    call disp(r, header='disp(r):')
+    call disp(r(1,:), header='disp(r(1,:))', format="f6.2")
+    call disp(c, header='disp(c):')
+    call disp(i, header='disp(i):', sep=",")
+    call disp(l, header='disp(l):', brief=.true.)
+    call disp(c_3d(:,3,1:10), header='disp(c_3d(:,3,1:10)):', width=100)
+    call disp(c_3d(2,:,:), header='disp(c_3d(2,:,:)):', brief=.true.)
+    
+    end block
 
 end program test

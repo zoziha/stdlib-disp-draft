@@ -23,7 +23,7 @@ This argument is `intent(in)` and `optional`.
 `header`: Shall be a `character(len=*)` scalar.
 This argument is `intent(in)` and `optional`.
 
-`unit`: Shall be an `integer(int32)` scalar linked to an IO stream.
+`unit`: Shall be an `integer` scalar linked to an IO stream.
 This argument is `intent(in)` and `optional`.
 The default value is `output_unit` from `iso_fortran_env` module.
 
@@ -35,13 +35,13 @@ The default value is `.false.`
 This argument is `intent(in)` and `optional`.
 The default value is `g0.4`.
 
-`width`: Shall be an `integer(int32)` scalar, controls the outputed max width.
+`width`: Shall be an `integer` scalar, controls the outputed max width.
 This argument is `intent(in)` and `optional`.
 The default value is `80`.
 
-`sep`: Shall be an `character(len=*)` scalar, separator.
+`sep`: Shall be a `character(len=*)` scalar, separator.
 This argument is `intent(in)` and `optional`.
-The default value is `  `, two spaces.
+The default value is "&ensp;&ensp;", two spaces.
 
 ### Effects
 

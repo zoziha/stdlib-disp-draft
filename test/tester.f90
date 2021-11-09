@@ -364,12 +364,17 @@ contains
 
     subroutine test_io_disp_string_type
 
-        type(string_type) :: str
+        type(string_type) :: str, s(6, 6)
 
         str = 'It is a string_type.'
+        s   = 'It is a string_type.'
         open (newunit=unit, status='scratch')
         call disp(str, header='Test_io_disp_string_type_scalar (brief) : ', brief=.true.)
         call disp(str, unit=unit, header='Test_io_disp_string_type_scalar (brief) : ', brief=.true.)
+        call disp(s, header='Test_io_disp_string_type_array (brief) : ', brief=.true.)
+        call disp(s, unit=unit, header='Test_io_disp_string_type_array (brief) : ', brief=.true.)
+        call disp(s, header='Test_io_disp_string_type_array : ')
+        call disp(s, unit=unit, header='Test_io_disp_string_type_array : ')
 
         !! Checks
         rewind (unit)
@@ -377,6 +382,23 @@ contains
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_string_type_scalar (brief) :', 'Header')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'It is a string_type.', 'Value')
+        read (unit, '(A200)') string
+        call check_formatter(trim(adjustl(string)), 'Test_io_disp_string_type_array (brief) :', 'Header')
+        read (unit, *)
+        read (unit, '(A200)') string
+        call check_formatter(trim(adjustl(string)), &
+            'It is a string_type.  It is a string_type.  It is a string_type.  ..                    It is a string_type.', &
+            'Value')
+        read (unit, *)
+        read (unit, *)
+        read (unit, *)
+        read (unit, *)
+        read (unit, '(A200)') string
+        call check_formatter(trim(adjustl(string)), 'Test_io_disp_string_type_array :', 'Header')
+        read (unit, *)
+        read (unit, '(A200)') string
+        call check_formatter(trim(adjustl(string)), &
+            'It is a string_type.  It is a string_type.  It is a string_type.                &', 'Value')
         close (unit)
 
     end subroutine test_io_disp_string_type

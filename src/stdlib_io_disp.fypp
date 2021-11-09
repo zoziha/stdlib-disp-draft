@@ -75,9 +75,9 @@ contains
         character(len=:), allocatable :: format_, sep_
         integer :: i, j
         #{if k1 != "string_type"}#type(string_type), allocatable :: x_str${ranksuffix(r1)}$#{endif}#
-        type(string_type) :: array_info
+        #{if r1 != 0}#type(string_type) :: array_info#{endif}#
         
-        !> State default values
+        #! State default values
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
@@ -244,7 +244,7 @@ contains
             num1 = merge(width/elem_len, 1, elem_len <= width)
             num2 = size(x, 1)/num1
             
-            if (num2 > 1 .or. size(x, 1) /= 0) then
+            if (num2 > 1 .or. size(x, 1) > 1 ) then
                 allocate(str(merge(num2, num2 + 1, mod(size(x, 1), num1)==0)))
                 
                 do i = 1, size(str) - 1
@@ -302,7 +302,7 @@ contains
         
     end function format_output_string
     
-    !> Prints array infomation
+    !> Print array infomation
     pure type(string_type) function array_info_maker(m, n) result(info)
         integer, intent(in) :: m
         integer, intent(in), optional :: n
