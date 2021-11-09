@@ -5,7 +5,7 @@ program test
     call disp(string_type("x"))
     call disp([1, 2], "dada")
     block
-        real(8) :: r(2, 3), r_2d(50, 20)
+        real(8) :: r(2, 6), r_2d(50, 20)
         complex :: c(2, 3), c_3d(2, 100, 20)
         integer :: i(2, 3)
         logical :: l(10, 10)
@@ -20,7 +20,7 @@ program test
         call disp(string_type('It is a note.'))
         call disp()
         call disp(r, header='disp(r):')
-        call disp(r(1, :), header='disp(r(1,:))')
+        call disp(r(1, :), header='disp(r(1,:))', brief=.true.)
         call disp(c, header='disp(c):', width=90)
         call disp(i, header='disp(i):')
         call disp(l, header='disp(l):', brief=.true., sep=", ")
