@@ -1884,7 +1884,7 @@ contains
         logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
         integer, intent(in) :: max_elem_len
-        character(width+2), allocatable :: str(:)
+        character(merge((max(max_elem_len, 2)+len(sep))*5, width, brief)+2), allocatable :: str(:)
         
         character(:), allocatable :: buffer
         character(max(max_elem_len, 2)+len(sep)) :: elem_buffer
