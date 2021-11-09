@@ -39,6 +39,7 @@ module stdlib_io_disp
 
     public :: disp
 
+    #! Displays a scalar or array value nicely
     interface disp
         module procedure disp_char
         #:for r1 in range(0, 3)
@@ -80,11 +81,15 @@ contains
         unit_   = optval(unit, output_unit)
         brief_  = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+        
+        #! width have to be greater than or equal 80 by default
         width_  = optval(width, 80)
         width_  = merge(width_, 80, width_ > 80)
+        
         sep_    = optval(sep, "  ")
         coloum  = string_type(":")
             
+        #! Prints header
         if (present(header)) then
             write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
         end if
@@ -119,6 +124,8 @@ contains
                 end do
                 
                 max_elem_len = maxval(len(x_str))
+                
+                #! Brief mode of rank-2 array
                 if (brief_.and.size(x, 1)>5) then
                     do i = 1, 3
                         write(unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -154,6 +161,7 @@ contains
                 
                 max_elem_len = maxval(len(x))
                 
+                #! Brief mode of rank-2 array
                 if (brief_.and.size(x, 1)>5) then
                     do i = 1, 3
                         write(unit_, "(*(A))") format_output_string(x(i, :), width_, brief_, sep_, max_elem_len)
@@ -184,8 +192,11 @@ contains
         integer, intent(in) :: width
         logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
+        
         #! Maxium elementaral string length.
         integer, intent(in) :: max_elem_len
+        
+        #! Output string: brief, ingore width.
         character(merge((max(max_elem_len, 2)+len(sep))*5, width, brief)+2), allocatable :: str(:)
         
         character(:), allocatable :: buffer
@@ -235,6 +246,7 @@ contains
                         buffer = buffer//elem_buffer
                     end do
                     
+                    #! Overlength elementaral string adjustment
                     if (len(x((i-1)*num1+j-1))>width-len(sep)-1) then
                         buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
                     end if
@@ -250,6 +262,7 @@ contains
                     buffer = buffer//elem_buffer
                 end do
                 
+                #! Overlength elementaral string adjustment
                 if (len(x((i-1)*num1+j-1))>width-len(sep)-1) then
                     buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
                 end if
@@ -265,6 +278,7 @@ contains
                     buffer = buffer//elem_buffer
                 end do
                 
+                #! Overlength elementaral string adjustment
                 if (num2 == 1 .and. len(x(j-1))>width-len(sep)-1) then
                     buffer(width-len(sep)-1:) = "**"//repeat(" ", len(sep))
                 end if
