@@ -82,8 +82,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -117,8 +119,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -152,8 +156,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -187,8 +193,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -222,8 +230,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -257,8 +267,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -292,8 +304,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -327,8 +341,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -362,8 +378,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -397,8 +415,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -432,8 +452,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -467,8 +489,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -502,8 +526,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -535,8 +561,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -575,8 +603,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -615,8 +645,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -655,8 +687,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -695,8 +729,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -735,8 +771,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -775,8 +813,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -815,8 +855,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -855,8 +897,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -895,8 +939,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -935,8 +981,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -975,8 +1023,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1015,8 +1065,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1051,8 +1103,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1071,6 +1125,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1108,8 +1163,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1128,6 +1185,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1165,8 +1223,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1185,6 +1245,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1222,8 +1283,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1242,6 +1305,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1279,8 +1343,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1299,6 +1365,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1336,8 +1403,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1356,6 +1425,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1393,8 +1463,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1413,6 +1485,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1450,8 +1523,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1470,6 +1545,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1507,8 +1583,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1527,6 +1605,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1564,8 +1643,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1584,6 +1665,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1621,8 +1703,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1641,6 +1725,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1678,8 +1763,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1698,6 +1785,7 @@ contains
         end do
 
         max_elem_len = maxval(len(x_str))
+
         if (brief_ .and. size(x, 1) > 5) then
             do i = 1, 3
                 write (unit_, "(*(A))") format_output_string(x_str(i, :), width_, brief_, sep_, max_elem_len)
@@ -1735,8 +1823,10 @@ contains
         unit_ = optval(unit, output_unit)
         brief_ = optval(brief, .false.)
         format_ = optval(format, "g0.4")
+
         width_ = optval(width, 80)
         width_ = merge(width_, 80, width_ > 80)
+
         sep_ = optval(sep, "  ")
         coloum = string_type(":")
 
@@ -1772,10 +1862,13 @@ contains
         integer, intent(in) :: width
         logical, intent(in) :: brief
         character(len=*), intent(in) :: sep
+
         integer, intent(in) :: max_elem_len
-        character(merge((max(max_elem_len, 2) + len(sep))*5, width, brief) + 2), allocatable :: str(:)
+
+        character(merge((max(max_elem_len, 2) + len(sep))*min(size(x, 1), 5), width, brief) + 2), allocatable :: str(:)
 
         character(:), allocatable :: buffer
+
         character(max(max_elem_len, 2) + len(sep)) :: elem_buffer
         integer :: elem_len, num1, num2, i, j
 
@@ -1783,6 +1876,7 @@ contains
 
             allocate (str(1))
             buffer = ""
+
             if (size(x, 1) <= 5) then
 
                 do i = 1, size(x, 1)
@@ -1796,22 +1890,25 @@ contains
                     elem_buffer = char(x(i))//sep
                     buffer = buffer//elem_buffer
                 end do
+
                 elem_buffer = ".."//sep
                 buffer = buffer//elem_buffer
+
                 elem_buffer = char(x(size(x, 1)))//sep
                 buffer = buffer//elem_buffer
 
             end if
+
             str(1) = buffer
 
         else
 
-            elem_len = max_elem_len + len(sep)
-            !> width adjustment
-            num1 = merge(width/elem_len, 1, elem_len < width)
+            elem_len = len(elem_buffer)
+
+            num1 = merge(width/elem_len, 1, elem_len <= width)
             num2 = size(x, 1)/num1
 
-            if (num2 > 1) then
+            if (num2 > 1 .or. size(x, 1) /= 0) then
                 allocate (str(merge(num2, num2 + 1, mod(size(x, 1), num1) == 0)))
 
                 do i = 1, size(str) - 1
@@ -1827,6 +1924,7 @@ contains
                     end if
 
                     str(i) = buffer
+
                     str(i) (width + 1:) = "&"//new_line("")
 
                 end do
@@ -1852,7 +1950,7 @@ contains
                     buffer = buffer//elem_buffer
                 end do
 
-                if (num2 == 1 .and. len(x(j - 1)) > width - len(sep) - 1) then
+                if (len(x(j - 1)) > width - len(sep) - 1) then
                     buffer(width - len(sep) - 1:) = "**"//repeat(" ", len(sep))
                 end if
 
@@ -1868,13 +1966,16 @@ contains
     pure type(string_type) function array_info_maker(m, n) result(info)
         integer, intent(in) :: m
         integer, intent(in), optional :: n
+
         if (present(n)) then
             info = string_type('[matrix size: '//to_string(m)//'×'//to_string(n)//']')
         else
             info = string_type('[vector size: '//to_string(m)//']')
         end if
+
     end function array_info_maker
 
+    !> Display `character(*)` value.
     subroutine disp_char(x, header, unit, brief, format, width, sep)
 
         character(*), intent(in), optional :: x
@@ -1888,7 +1989,6 @@ contains
         integer :: unit_, width_
         logical :: brief_
         character(len=:), allocatable :: x_, sep_
-        integer :: i, j
 
         !> State default values
         x_ = optval(x, "")

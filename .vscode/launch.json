@@ -7,7 +7,14 @@
         {
             "type": "by-gdb",
             "request": "launch",
-            "name": "Launch(gdb)",
+            "name": "tester",
+            "program": "build/gfortran_2A42023B310FA28D/test/tester.exe",
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "by-gdb",
+            "request": "launch",
+            "name": "test_io_disp",
             "program": "build/gfortran_2A42023B310FA28D/test/test_io_disp.exe",
             "cwd": "${workspaceRoot}"
         }
