@@ -1,8 +1,8 @@
-#:set REAL_KINDS = ["sp", "dp", "qp"]
+#:set REAL_KINDS = ["sp", "dp"]
 #:set REAL_TYPES = ["real({})".format(k) for k in REAL_KINDS]
 #:set REAL_KINDS_TYPES = list(zip(REAL_KINDS, REAL_TYPES))
 
-#:set CMPLX_KINDS = ["sp", "dp", "qp"]
+#:set CMPLX_KINDS = ["sp", "dp"]
 #:set CMPLX_TYPES = ["complex({})".format(k) for k in CMPLX_KINDS]
 #:set CMPLX_KINDS_TYPES = list(zip(CMPLX_KINDS, CMPLX_TYPES))
 
@@ -91,7 +91,7 @@ contains
             
         #! Prints header
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
+            write(unit_, "(A)") format_output_string([string_type(header)], width_, brief_, "", len(header))
         end if
         
         #:if k1 != "string_type"
@@ -103,7 +103,7 @@ contains
             
             #:elif r1 == 1
                 array_info = array_info_maker(size(x, 1))
-                write(unit_, *) format_output_string([array_info], width_, brief_, "", len(array_info))
+                write(unit_, "(A)") format_output_string([array_info], width_, brief_, "", len(array_info))
             
                 allocate(x_str(size(x, 1)))
                 do i = 1, size(x, 1)
@@ -114,7 +114,7 @@ contains
             #:elif r1 == 2
             
                 array_info = array_info_maker(size(x, 1), size(x, 2))
-                write(unit_, *) format_output_string([array_info], width_, brief_, "", len(array_info))
+                write(unit_, "(A)") format_output_string([array_info], width_, brief_, "", len(array_info))
                 
                 allocate(x_str(size(x, 1), size(x, 2)))
                 do i = 1, size(x, 1)
@@ -150,14 +150,14 @@ contains
             
             #:elif r1 == 1
                 array_info = array_info_maker(size(x, 1))
-                write(unit_, *) format_output_string([array_info], width_, brief_, "", len(array_info))
+                write(unit_, "(A)") format_output_string([array_info], width_, brief_, "", len(array_info))
                 
                 write(unit_, "(*(A))") format_output_string(x, width_, brief_, sep_, maxval(len(x)))
                 
             #:elif r1 == 2
             
                 array_info = array_info_maker(size(x, 1), size(x, 2))
-                write(unit_, *) format_output_string([array_info], width_, brief_, "", len(array_info))
+                write(unit_, "(A)") format_output_string([array_info], width_, brief_, "", len(array_info))
                 
                 max_elem_len = maxval(len(x))
                 
@@ -308,7 +308,7 @@ contains
         integer, intent(in), optional :: n
         
         if (present(n)) then
-            info = string_type('[matrix size: ' // to_string(m) // '×' // to_string(n) // ']')
+            info = string_type('[matrix size: ' // to_string(m) // '*' // to_string(n) // ']')
         else
             info = string_type('[vector size: ' // to_string(m) // ']')
         end if
@@ -339,7 +339,7 @@ contains
         sep_    = optval(sep, "  ")
             
         if (present(header)) then
-            write(unit_, *) format_output_string([string_type(header)], width_, brief_, "", len(header))
+            write(unit_, "(A)") format_output_string([string_type(header)], width_, brief_, "", len(header))
         end if
         
         coloum(1) = string_type(x_)

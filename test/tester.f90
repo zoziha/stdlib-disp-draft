@@ -82,7 +82,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_complex_matrix :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 2×2]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 2*2]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              '(1.000,1.000)  (1.000,1.000)', 'Matrix Vector 1')
@@ -93,7 +93,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_complex_matrix (brief) :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 6×6]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 6*6]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
         '(1.000,1.000)  (1.000,1.000)  (1.000,1.000)  ..             (1.000,1.000)', 'Matrix Vector 1')
@@ -159,7 +159,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_real_matrix :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 2×2]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 2*2]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              '1.000  1.000', 'Matrix Vector 1')
@@ -170,7 +170,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_real_matrix (brief) :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 6×6]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 6*6]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              '1.000  1.000  1.000  ..     1.000', 'Matrix Vector 1')
@@ -236,7 +236,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_integer_matrix :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 2×2]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 2*2]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              '1   1', 'Matrix Vector 1')
@@ -247,7 +247,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_integer_matrix (brief) :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 6×6]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 6*6]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              '1   1   1   ..  1', 'Matrix Vector 1')
@@ -313,7 +313,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_logical_matrix :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 2×2]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 2*2]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              'T   T', 'Matrix Vector 1')
@@ -324,7 +324,7 @@ contains
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), 'Test_io_disp_logical_matrix (brief) :', 'Header')
         read (unit, '(A200)') string
-        call check_formatter(trim(adjustl(string)), '[matrix size: 6×6]', 'Matrix Info')
+        call check_formatter(trim(adjustl(string)), '[matrix size: 6*6]', 'Matrix Info')
         read (unit, '(A200)') string
         call check_formatter(trim(adjustl(string)), &
                              'T   T   T   ..  T', 'Matrix Vector 1')
@@ -405,9 +405,9 @@ contains
     
     subroutine larger_matrix
         real(4) :: x(51,51)
-        call disp(x, header="Test_io_disp_real_matrix (51×51)(default) : [10×50]")
-        call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.true.) : [5×5]", brief=.true.)
-        call disp(x, header="Test_io_disp_real_matrix (51×51)(brief=.false.) : [all]", brief=.false.)
+        call disp(x, header="Test_io_disp_real_matrix (51*51)(default) : [10*50]")
+        call disp(x, header="Test_io_disp_real_matrix (51*51)(brief=.true.) : [5x5]", brief=.true.)
+        call disp(x, header="Test_io_disp_real_matrix (51*51)(brief=.false.) : [all]", brief=.false.)
     end subroutine larger_matrix
     
 end module test_io_disp
@@ -415,7 +415,7 @@ end module test_io_disp
 program tester
 
     use test_io_disp
-    logical :: test_larger = .false.
+    logical :: test_larger = .true.
     
     call test_io_disp_complex
     call test_io_disp_real
@@ -430,5 +430,7 @@ program tester
     if (test_larger) then
         call larger_matrix
     end if
+    
+    print *, "左志华"
 
 end program tester
